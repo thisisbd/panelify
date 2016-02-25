@@ -85,4 +85,4 @@ If you're using Node and want it in CommonJS syntax (`require('./panelify')`), c
   
 # License
 
-  MIT
+  Panelify is licensed under the [MIT License](LICENSE.txt).
