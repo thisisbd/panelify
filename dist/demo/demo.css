@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+}
+
+#container {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1068px) {
+    .panelify {
+        min-height: 900px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1068px) {
+    .panelify {
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+.panelify h2, .panelify p {
+    color: #FFFFFF;
+    margin: 0;
+}
+
+#panel1 {
+    background: transparent url(images/background1.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+#panel2 {
+    background: transparent url(images/background2.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+#panel3 {
+    background: transparent url(images/background3.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+#panel4 {
+    background: transparent url(images/background4.jpg) no-repeat fixed center;
+    background-size: cover;
+}
