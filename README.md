@@ -1,4 +1,6 @@
-![logo](https://github.com/thisisbd/panelify/raw/master/panelify-logo.png)
+![logo](https://cdn.rawgit.com/thisisbd/panelify/975101663ecd8afa707706ba5d991514eccc4122/panelify-logo.svg)
+
+[![Build Status](https://travis-ci.org/thisisbd/panelify.svg?branch=master)](https://travis-ci.org/thisisbd/panelify)
 
 Smooth vertical sliding panels using Waypoints.
 

@@ -1,12 +1,13 @@
 language: node_js
 node_js:
-  - "4.0"
-  - "4.1"
-  - "4.2"
-  - "5.0"
-  - "5.1"
-  - "5.2"
+- '4.0'
+- '4.1'
+- '4.2'
+- '5.0'
+- '5.1'
+- '5.2'
 deploy:
   provider: npm
-  email: "danielseangriffin@gmail.com"
-  api_key: "YOUR_API_KEY"
+  email: danielseangriffin@gmail.com
+  api_key:
+    secure: CmmKv+r6CSpUOp1Oz+KcazQgLHIH2btSlwmFCuR+yQ3vGXACgP1GhepnOE8Oc8LslZGGGBEpRIG95rBiqCc7AN/lnc2qlEwF8IWEcqZ3q5kqGwnYQUDWjoziFdvaPx7oCDzHwpDwxp1e9plcSYlFmdIMcCBoXTJpvFRPaFsRqO3YfSV4PRYTMO2GeSD4/7Kret/MDthRWWUTbpzi6f0rqwolK93C5jfJp8zcfnJzwavD9lz3fhuZd1Vgk50j0QLLA357Kodw8xv8uRW+sBpJXfxq24aV5cn6/mp3qMo0O2xNa3R/W2UErVAUXS55+F1yZcEfzEaypK/TG5iz+0440ffY67GUqBLcJwpuujlQdhPiaxPnQCPBsqyNXGI//SFjqRAdaa7sH41/c8xcY0rAHdfOc+B4zG1BZt6a6rC4eACuir1R+dhPtf2tJaX0EfAhXRalXXn5nAQEzr7SvHMtqeQzmg7lYoI4za/+/afoeYs44cCkgWEqL588J1AMnUIPaceGxm3yAAqxiUAx1ICGpcivNWxY+Eq4zV6aZApB55ora1XMlDVf0zUR4p1oV2GrTcH1TuoBd6KAoDFcqkCurm0SEPdUIixabhfg1cPc07Wdd5w3stC6GMSrN92mZ6CCX7433Kk8j1t23e1+V3XwDeuilt1NSyvmj5i14BGUArI=

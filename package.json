@@ -1,6 +1,6 @@
 {
   "name": "panelify",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "Daniel Griffin",
   "description": "smooth vertical panel sliding using waypoints",
   "keywords": [
