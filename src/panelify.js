@@ -84,6 +84,7 @@ export default class Panelify {
         const elmStyle = elm.style;
         const offset = Panelify.panelifyOffset() === '0%' ? 'top' : 'bottom';
         // resets element top prop (if waypoints are triggered at the top of a panel) or bottom prop (if at the bottom of the panel)
+        elmStyle.transform = '';
         elmStyle[offset] = '';
         elmStyle.position = '';
         elmStyle.zIndex = '';
