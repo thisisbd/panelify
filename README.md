@@ -43,8 +43,8 @@ This is a front end package and the current easiest way to implement it is:
 Then you can call it in your own script like:
 
 ```javascript
-// grab and initialize the default waypoint offset to 0% (top of panel)
-var panelify = new Panelify.default('0%');
+// grab and initialize the waypoint offset to 0% (top of panel)
+var panelify = new Panelify('0%');
 ```
 If you're using Node and want it in CommonJS syntax (`require('./panelify')`), change the `libraryTarget` in `webpack.config.js` from `var` to `commonjs2` and then build.
 
@@ -54,12 +54,12 @@ If you're using Node and want it in CommonJS syntax (`require('./panelify')`), c
 
 * `0%`: this triggers the panelify event as soon as the top of the panel is in the viewport (nicer for short content that fits in one 'screen')
 
-    1. **Example**: `var panelify = new Panelify.default('0%');`
+    1. **Example**: `var panelify = new Panelify('0%');`
 
 * `bottom-in-view` (**default**): this triggers the panelify event when the bottom of the current panel comes into the viewport (better for longer content).
 
-    1. **Example**: `let panelify = new Panelify.default();`
-    2. **Example**: `let panelify = new Panelify.default('bottom-in-view');`
+    1. **Example**: `let panelify = new Panelify();`
+    2. **Example**: `let panelify = new Panelify('bottom-in-view');`
   
 # Build
 
