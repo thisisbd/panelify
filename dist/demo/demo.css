@@ -11,9 +11,7 @@ body {
 
 header { text-align: center; }
 
-p {
-    margin: 0;
-}
+p { margin: 0; }
 
 /* Container */
 
@@ -34,7 +32,8 @@ p {
 @media only screen and (max-width: 1068px) {
     /* Panels are static on non-desktop devices, so you can style this appropriately. */
     .panelify {
-        height: 100%;
+        height: 110vh;
+        transform: translateZ(0); /* forces a refresh, used if the default maxwidth is changed to target mobile/tablet */
         width: 100%;
     }
 }

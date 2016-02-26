@@ -4,15 +4,20 @@
  Copyright © 2011-2015 BD Network (https://github.com/thisisbd)
  Licensed under the MIT license.
 */
+
 import Waypoint from './../node_modules/waypoints/lib/noframework.waypoints.min.js';
+
+// force page to the top on refresh/hard refresh
+window.onbeforeunload = function() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+};
 
 // panelify; smooth vertical sliding panels using waypoints
 export default class Panelify {
-    constructor(offset = 'bottom-in-view') {
-        // desktop only; return and exit otherwise.
-        if (window.matchMedia("(max-width: 1068px)").matches) {
-            return;
-        }
+    constructor(offset = 'bottom-in-view', minScreenWidth = 1068) {
+        // desktop only by default unless user wants a manual implementation of tablet/mobile versions.
+        // return and exit otherwise.
+        if (window.matchMedia(`(max-width: ${minScreenWidth}px)`).matches) { return; }
         // a choice of either 0% or bottom-in-view; if neither are chosen, bottom-in-view is assumed
         Panelify.panelifyOffset(offset);
         // this will hold the waypoint triggers
@@ -72,7 +77,6 @@ export default class Panelify {
 
     static setPadderHeight(elm, height) {
         elm.style.height = `${height}px`;
-        console.log(elm.style.height);
     }
 
     static fixElement(elm) {

@@ -43,10 +43,9 @@ This is a front end package and the current easiest way to implement it is:
 Then you can call it in your own script like:
 
 ```javascript
-// grab and initialize the waypoint offset to 0% (top of panel)
-var panelify = new Panelify('0%');
+// grab and initialize the waypoint offset to bottom-in-view (bottom of each panel)
+var panelify = new Panelify();
 ```
-If you're using Node and want it in CommonJS syntax (`require('./panelify')`), change the `libraryTarget` in `webpack.config.js` from `var` to `commonjs2` and then build.
 
 ### Options ###
 
@@ -60,6 +59,14 @@ If you're using Node and want it in CommonJS syntax (`require('./panelify')`), c
 
     1. **Example**: `let panelify = new Panelify();`
     2. **Example**: `let panelify = new Panelify('bottom-in-view');`
+    
+`minScreenWidth`: the minimum screen width (in pixels) where panelify will be triggered and non static (default: `1068`) 
+
+* NOTE: anything less than `1068` is not officially supported and shouldn't be used in production. 
+
+    1. It will still work on all desktop browsers if decreased (e.g. if a browser is resized) 
+
+    2. Phones/Tablets bug out to various degrees (Safari iOS on iPhone/iPad handle it well, except for when the popup menus appear if overscrolled. Android phones bug out for more complicated reasons).
   
 # Build
 
@@ -80,12 +87,11 @@ If you're using Node and want it in CommonJS syntax (`require('./panelify')`), c
 
 * `webpack -p` - for building for production (minification)
 
-
 # Browser Support
 
 **Desktop**: Chrome, Firefox, Safari, Edge, IE9+
 
-**Tablet/Mobile**: None currently (issues with the built-in URL/Navigation bars have meant this is still under development).
+**Tablet/Mobile**: None (falls back to static panels which can be styled as appropriate). This is due to issues with the built-in URL/Navigation bars have meant this is still under development).
 
 # Contributing
 
