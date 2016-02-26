@@ -10,11 +10,11 @@ Smooth vertical sliding panels using Waypoints.
 
 # Basic Usage
 
-Quickstart: see the demo at `dist/demo`
+Quickstart: [see the demo](https://github.com/thisisbd/panelify/tree/master/dist/demo)
 
 ### HTML ###
 
-Panelify requires markup using the following (a `transparent-padder` element is needed to fill the space when overlaying panels):
+Panelify requires markup similar to the following (a `transparent-padder` element is needed to fill the space when overlaying panels):
   
 ```html
 <div id="transparent-padder"></div>
@@ -32,18 +32,18 @@ Panelify requires markup using the following (a `transparent-padder` element is 
 
 ### CSS ###
 
-Customize as you wish, but a nice and simple example can be found in the [demo css](dist/demo/demo.css).
+Customise as necessary, but a nice and simple example can be found in the [demo css](https://github.com/thisisbd/panelify/blob/master/dist/demo/demo.css).
 
 ### JavaScript ###
 
-This is a front end package and the current easiest way to implement it is:
+This is a front end package; the current easiest way to implement it is:
 
 `<script src="[Path to node_modules goes here]/panelify/dist/panelify.js"></script>`
 
 Then you can call it in your own script like:
 
 ```javascript
-// grab and initialize the waypoint offset to bottom-in-view (bottom of each panel)
+// grab and initialise the waypoint offset to bottom-in-view (bottom of each panel)
 var panelify = new Panelify();
 ```
 
@@ -91,12 +91,12 @@ var panelify = new Panelify();
 
 **Desktop**: Chrome, Firefox, Safari, Edge, IE9+
 
-**Tablet/Mobile**: None (falls back to static panels which can be styled as appropriate). This is due to issues with the built-in URL/Navigation bars have meant this is still under development).
+**Tablet/Mobile**: None yet. Falls back to static panels (unless defaults are overridden). This is due to issues with the built-in URL/Navigation bars have meant this is still under development.
 
 # Contributing
 
-  See [issues](https://github.com/thisisbd/Panelify/issues); general feature improvements also welcome!
+  See [issues](https://github.com/thisisbd/Panelify/issues); general feature improvements are also welcome!
   
 # License
 
-  Panelify is licensed under the [MIT License](LICENSE.txt).
+  Panelify is licensed under the [MIT License](https://github.com/thisisbd/panelify/blob/master/LICENSE.txt).
