@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './src/panelify.js',
+    entry: ['babel-polyfill', './src/panelify.js'],
     output: {
         filename: "./dist/panelify.js",
         library: "Panelify",

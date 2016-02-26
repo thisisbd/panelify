@@ -1,3 +1,3 @@
-// grab and initialize the default waypoint offset to bottom-in-view (triggers at the bottom of each panel)
-// use new Panelify('0%'); to see the demo work with waypoint triggering at the top of panels instead.
-var panelify = new Panelify.default('0%');
+// use new Panelify(); or use new Panelify('bottom-in-view'); to see the slide trigger at the bottom of each panel (better for longer content)
+// use new Panelify('0%'); to see the slide trigger at the top of each panel (better for short/contained content)
+var panelify = new Panelify.default();

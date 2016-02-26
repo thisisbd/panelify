@@ -14,9 +14,9 @@ Quickstart: see the demo at `dist/demo`
 
 ### HTML ###
 
-Panelify requires the following markup (a `transparent-padder` element is needed to fill the space when overlaying panels):
+Panelify requires markup using the following (a `transparent-padder` element is needed to fill the space when overlaying panels):
   
-```
+```html
 <div id="transparent-padder"></div>
 
 <div class="panelify">
@@ -28,10 +28,11 @@ Panelify requires the following markup (a `transparent-padder` element is needed
 <div class="panelify">
     Panel 3 content...
 </div>
-<div class="panelify">
-    Panel 4 content...
-</div>
 ```
+
+### CSS ###
+
+Customize as you wish, but a nice and simple example can be found in the [demo css](dist/demo/demo.css).
 
 ### JavaScript ###
 
@@ -41,7 +42,7 @@ This is a front end package and the current easiest way to implement it is:
 
 Then you can call it in your own script like:
 
-```
+```javascript
 // grab and initialize the default waypoint offset to 0% (top of panel)
 var panelify = new Panelify.default('0%');
 ```
@@ -78,6 +79,13 @@ If you're using Node and want it in CommonJS syntax (`require('./panelify')`), c
 ### Production ###
 
 * `webpack -p` - for building for production (minification)
+
+
+# Browser Support
+
+**Desktop**: Chrome, Firefox, Safari, Edge, IE9+
+
+**Tablet/Mobile**: None currently (issues with the built-in URL/Navigation bars have meant this is still under development).
 
 # Contributing
 

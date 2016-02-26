@@ -1,6 +1,6 @@
 {
   "name": "panelify",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "author": "Daniel Griffin",
   "description": "smooth vertical panel sliding using waypoints",
   "keywords": [
@@ -20,6 +20,7 @@
     "test": "mocha"
   },
   "dependencies": {
+    "babel-polyfill": "^6.5.0",
     "waypoints": "^4.0.0"
   },
   "devDependencies": {

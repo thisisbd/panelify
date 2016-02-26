@@ -1,16 +1,30 @@
+/* General */
+
 body {
+    color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
     margin: 0;
     padding: 0;
 }
-header {
-    text-align: center;
+
+header { text-align: center; }
+
+p {
+    margin: 0;
 }
+
+/* Container */
 
 #container {
     width: 100%;
 }
 
+/* Individual Panels */
+
 @media only screen and (min-width: 1068px) {
+    /* Change the min-height depending on what kind of content you have etc */
     .panelify {
         min-height: 900px;
         width: 100%;
@@ -18,16 +32,11 @@ header {
 }
 
 @media only screen and (max-width: 1068px) {
+    /* Panels are static on non-desktop devices, so you can style this appropriately. */
     .panelify {
-        height: 100vh;
-        transform: translateZ(0); /* force repainting on phones/tablets */
+        height: 100%;
         width: 100%;
     }
-}
-
-.panelify h2, .panelify p {
-    color: #FFFFFF;
-    margin: 0;
 }
 
 #panel1 {

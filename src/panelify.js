@@ -4,12 +4,15 @@
  Copyright © 2011-2015 BD Network (https://github.com/thisisbd)
  Licensed under the MIT license.
 */
-
 import Waypoint from './../node_modules/waypoints/lib/noframework.waypoints.min.js';
 
 // panelify; smooth vertical sliding panels using waypoints
 export default class Panelify {
     constructor(offset = 'bottom-in-view') {
+        // desktop only; return and exit otherwise.
+        if (window.matchMedia("(max-width: 1068px)").matches) {
+            return;
+        }
         // a choice of either 0% or bottom-in-view; if neither are chosen, bottom-in-view is assumed
         Panelify.panelifyOffset(offset);
         // this will hold the waypoint triggers
@@ -32,7 +35,7 @@ export default class Panelify {
     }
 
     handler(direction) {
-        const elmContainer = this.element.closest(".panelify");
+        const elmContainer = this.element;
         const padder = document.getElementById('transparent-padder');
 
         if(direction === 'down') {
@@ -69,6 +72,7 @@ export default class Panelify {
 
     static setPadderHeight(elm, height) {
         elm.style.height = `${height}px`;
+        console.log(elm.style.height);
     }
 
     static fixElement(elm) {
@@ -84,7 +88,6 @@ export default class Panelify {
         const elmStyle = elm.style;
         const offset = Panelify.panelifyOffset() === '0%' ? 'top' : 'bottom';
         // resets element top prop (if waypoints are triggered at the top of a panel) or bottom prop (if at the bottom of the panel)
-        elmStyle.transform = '';
         elmStyle[offset] = '';
         elmStyle.position = '';
         elmStyle.zIndex = '';
