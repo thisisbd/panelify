@@ -10,13 +10,13 @@ Smooth vertical sliding panels using Waypoints.
 
 # Basic Usage
 
-Quickstart: see the demo at `dist/demo`
+Quickstart: [see the demo](https://github.com/thisisbd/panelify/tree/master/dist/demo)
 
 ### HTML ###
 
-Panelify requires the following markup (a `transparent-padder` element is needed to fill the space when overlaying panels):
+Panelify requires markup similar to the following (a `transparent-padder` element is needed to fill the space when overlaying panels):
   
-```
+```html
 <div id="transparent-padder"></div>
 
 <div class="panelify">
@@ -28,24 +28,24 @@ Panelify requires the following markup (a `transparent-padder` element is needed
 <div class="panelify">
     Panel 3 content...
 </div>
-<div class="panelify">
-    Panel 4 content...
-</div>
 ```
+
+### CSS ###
+
+Customise as necessary, but a nice and simple example can be found in the [demo css](https://github.com/thisisbd/panelify/blob/master/dist/demo/demo.css).
 
 ### JavaScript ###
 
-This is a front end package and the current easiest way to implement it is:
+This is a front end package; the current easiest way to implement it is:
 
 `<script src="[Path to node_modules goes here]/panelify/dist/panelify.js"></script>`
 
 Then you can call it in your own script like:
 
+```javascript
+// grab and initialise the waypoint offset to bottom-in-view (bottom of each panel)
+var panelify = new Panelify();
 ```
-// grab and initialize the default waypoint offset to 0% (top of panel)
-var panelify = new Panelify.default('0%');
-```
-If you're using Node and want it in CommonJS syntax (`require('./panelify')`), change the `libraryTarget` in `webpack.config.js` from `var` to `commonjs2` and then build.
 
 ### Options ###
 
@@ -53,12 +53,20 @@ If you're using Node and want it in CommonJS syntax (`require('./panelify')`), c
 
 * `0%`: this triggers the panelify event as soon as the top of the panel is in the viewport (nicer for short content that fits in one 'screen')
 
-    1. **Example**: `var panelify = new Panelify.default('0%');`
+    1. **Example**: `var panelify = new Panelify('0%');`
 
 * `bottom-in-view` (**default**): this triggers the panelify event when the bottom of the current panel comes into the viewport (better for longer content).
 
-    1. **Example**: `let panelify = new Panelify.default();`
-    2. **Example**: `let panelify = new Panelify.default('bottom-in-view');`
+    1. **Example**: `let panelify = new Panelify();`
+    2. **Example**: `let panelify = new Panelify('bottom-in-view');`
+    
+`minScreenWidth`: the minimum screen width (in pixels) where panelify will be triggered and non static (default: `1068`) 
+
+* NOTE: anything less than `1068` is not officially supported and shouldn't be used in production. 
+
+    1. It will still work on all desktop browsers if decreased (e.g. if a browser is resized) 
+
+    2. Phones/Tablets bug out to various degrees (Safari iOS on iPhone/iPad handle it well, except for when the popup menus appear if overscrolled. Android phones bug out for more complicated reasons).
   
 # Build
 
@@ -79,10 +87,16 @@ If you're using Node and want it in CommonJS syntax (`require('./panelify')`), c
 
 * `webpack -p` - for building for production (minification)
 
+# Browser Support
+
+**Desktop**: Chrome, Firefox, Safari, Edge, IE9+
+
+**Tablet/Mobile**: None yet. Falls back to static panels (unless defaults are overridden). This is due to issues with the built-in URL/Navigation bars have meant this is still under development.
+
 # Contributing
 
-  See [issues](https://github.com/thisisbd/Panelify/issues); general feature improvements also welcome!
+  See [issues](https://github.com/thisisbd/Panelify/issues); general feature improvements are also welcome!
   
 # License
 
-  Panelify is licensed under the [MIT License](LICENSE.txt).
+  Panelify is licensed under the [MIT License](https://github.com/thisisbd/panelify/blob/master/LICENSE.txt).

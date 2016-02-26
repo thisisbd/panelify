@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './src/panelify.js',
+    entry: ['babel-polyfill', './src/panelify.js'],
     output: {
         filename: "./dist/panelify.js",
         library: "Panelify",
@@ -11,7 +11,8 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel',
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015'],
+                    plugins: ['add-module-exports']
                 }
             }
         ]
